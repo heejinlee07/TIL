@@ -1,0 +1,319 @@
+@charset "utf-8";
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(fontello.css);
+@import url(normalize.css);
+
+/* 스타일 초기화 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 기본 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "spoqa-han-sans", "sans-serif";
+  font-weight: 400;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #181818;
+}
+
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  background: silver;
+  height: 100vh;
+}
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  box-sizing: border-box;
+  width: 940px;
+  margin: 0 auto;
+}
+/* 헤더 */
+.header {
+  background: #fff;
+  position: relative;
+  padding: 0 30px;
+  border-radius: 0 0 15px 15px;
+}
+
+/* 메인메뉴 */
+.readable-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+.menu {
+  padding-left: 225px;
+  background: linear-gradient(
+    to bottom,
+    #e8852e 0%,
+    #ed552f 35%,
+    #ed552f 70%,
+    #e8852e 100%
+  );
+  height: 47px;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  margin-top: 4px;
+}
+.menu-item {
+  float: left;
+  position: relative;
+}
+.menu-item-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 45px;
+  padding: 0 20px;
+  border-left: 2px solid #fff;
+  display: block;
+  text-shadow: 0 1px #000, 1px 0 #000, 0 -1px #000, -1px 0 #000;
+}
+.menu-act .menu-item-text {
+  color: #ff0;
+}
+.menu-act .menu-item-text::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+.sub-menu {
+  white-space: nowrap;
+  position: absolute;
+  top: 47px;
+  display: none;
+}
+.menu-act .sub-menu {
+  display: block;
+}
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
+}
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  padding: 8px 10px 8px 0;
+  margin-right: 5px;
+}
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 65px;
+}
+
+/* 멤버링크 */
+.member {
+  text-align: right;
+  padding: 2px 0;
+  position: relative;
+  right: -10px;
+}
+.member li,
+.member a {
+  display: inline-block;
+}
+.member li:nth-child(n + 2)::before {
+  content: ":";
+}
+.member a {
+  padding: 8px 7px 7px 10px;
+  text-transform: uppercase;
+}
+.visual {
+  background: orange;
+  height: 120px;
+}
+.main {
+  background: pink;
+  padding: 30px 15px;
+  /*height: 60vh;*/
+  /*display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;*/
+}
+.main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.group {
+  float: left;
+  height: 30vh;
+  margin: 0 15px;
+}
+.group1 {
+  background: limegreen;
+  width: 250px;
+  float: left;
+}
+.group2 {
+  background: aquamarine;
+  width: 380px;
+  float: left;
+}
+.group3 {
+  background: lightcoral;
+  width: 190px;
+  float: left;
+}
+.slogan {
+  background: skyblue;
+  height: 10vh;
+}
+.footer-bg {
+  background: purple;
+}
+.footer {
+  background: yellow;
+  height: 10vh;
+}
