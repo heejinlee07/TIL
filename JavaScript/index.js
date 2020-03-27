@@ -4,6 +4,9 @@
 // console.log(x); //2
 
 //아래 if문을 삼항조건연산자로 써보기
+var num = 2;
+var kind = "";
+
 if (num > 0) {
   kind = "양수";
 } else {

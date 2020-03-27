@@ -1,0 +1,23 @@
+{
+  "name": "TIL",
+  "version": "1.0.0",
+  "description": "Today I Learned.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heejinlee07/TIL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heejinlee07/TIL/issues"
+  },
+  "homepage": "https://github.com/heejinlee07/TIL#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
