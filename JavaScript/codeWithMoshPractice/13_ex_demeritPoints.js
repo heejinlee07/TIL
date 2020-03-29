@@ -15,6 +15,8 @@ function checkSpeed(speed) {
 }
 */
 
+checkSpeed(200);
+
 function checkSpeed(speed) {
   const speedLimit = 70;
   const kmPerPoint = 5;
@@ -26,4 +28,3 @@ function checkSpeed(speed) {
     else console.log("points", points);
   }
 }
-console.log(checkSpeed(75));
