@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 여기서 value는 attribute value. 초기값 -->
+    <input id="user" type="text" value="ungmo2" />
+    <input id="ck" type="checkbox" checked="checked" />
+  </body>
+  <script>
+    const $checkbox = document.getElementById("ck");
+
+    $checkbox.onchange = function(e) {
+      console.log("checked prop: ", e.target.checked);
+      console.log("checked attr: ", $checkbox.getAttribute("checked"));
+    };
+  </script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Click me</button>
+  </body>
+  <script>
+    const $button = document.querySelector(".btn"); //요소노드 취득
+    // console.dir($button);
+    //함수 참조를 주어 브라우저가 alert함수를 호출. 이벤트핸들러.
+    $button.onclick = function() {
+      alert("Hi");
+    };
+  </script>
+</html>

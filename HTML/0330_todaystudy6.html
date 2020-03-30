@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input class="inputTodo" type="text" placeholder="enter todo" />
+    <input class="checked" type="checkbox" />
+    <ul class="todos"></ul>
+  </body>
+  <script>
+    const $inputTodo = document.querySelector(".inputTodo");
+    const $todos = document.querySelector(".todos");
+    const $checkbox = document.querySelector("input[type=checkbox]");
+    $inputTodo.onkeyup = e => {
+      if (e.keyCode !== 13) return;
+      $todos.innerHTML += `<li><input type = "checkbox">${$inputTodo.value}<button class= 'add'>x</button></li>`;
+      $inputTodo.value = "";
+    };
+
+    $todos.onchange = e => {
+      $todos.innerHTML = "";
+    };
+  </script>
+</html>

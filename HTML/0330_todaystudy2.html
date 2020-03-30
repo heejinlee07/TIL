@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 여기서 value는 attribute value. 초기값 -->
+    <input id="user" type="text" value="ungmo2" />
+  </body>
+  <script>
+    const $input = document.getElementById("user");
+    console.log($input);
+
+    console.log($input.getAttribute("value"));
+    console.log($input.setAttribute("value", "ungmo3"));
+    // 초기값을 ungmo2에서 ungmo3로 바꾸겠다.
+
+    $input.oninput = function(e) {
+      console.log("value prop: ", e.target.value);
+      console.log("value attr: ", $input.getAttribute("value"));
+    };
+  </script>
+</html>
