@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li>APPLE</li>
+      <li>BANANA</li>
+    </ul>
+    <script>
+      const $fruits = document.getElementById("fruits");
+
+      const { childNodes } = $fruits;
+      console.log(childNodes instanceof Nodelist);
+
+      console.log(childNodes);
+
+      [...childNodes].forEach(childNode => {
+        $fruits.removeChild(childNode);
+      });
+      console.log(childNodes);
+    </script>
+  </body>
+</html>

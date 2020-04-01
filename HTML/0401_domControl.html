@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="foo">Hello <span>world!</span></div>
+    <ul id="fruits">
+      <li class="apple">Apple</li>
+    </ul>
+  </body>
+  <script>
+    console.log(document.getElementById("foo").innerHTML);
+
+    const fruits = document.getElementById("fruits");
+
+    //노드 추가
+    fruits.innerHTML += "<li class = 'banana'>Banana</li>";
+    fruits.innerHTML += "<li class = 'orange'>Orange</li>";
+
+    //노드 삭제
+    fruits.innerHTML = "";
+  </script>
+</html>

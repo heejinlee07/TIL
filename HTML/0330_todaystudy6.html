@@ -14,9 +14,10 @@
     const $inputTodo = document.querySelector(".inputTodo");
     const $todos = document.querySelector(".todos");
     const $checkbox = document.querySelector("input[type=checkbox]");
+
     $inputTodo.onkeyup = e => {
       if (e.keyCode !== 13) return;
-      $todos.innerHTML += `<li><input type = "checkbox">${$inputTodo.value}<button class= 'add'>x</button></li>`;
+      $todos.innerHTML += `<li><input type = "checkbox"><span>${$inputTodo.value}</span><button class= 'add'>x</button></li>`;
       $inputTodo.value = "";
     };
 

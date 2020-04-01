@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="fruits"></ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+
+    ["Apple", "Banana", "Orange"].forEach(text => {
+      // 1. 요소 노드 생성
+      const $li = document.createElement("li");
+
+      // 2. 텍스트 노드 생성
+      const $textNode = document.createTextNode(text);
+
+      // 3. 텍스트 노드를 요소 노드의 자식 노드로 추가
+      $li.appendChild($textNode);
+
+      // 4. 요소 노드를 DOM에 추가
+      $fruits.appendChild($li);
+    });
+
+    /*DOM을 변경하는 것은 비용이 비싼 처리이므로 가급적 횟수를 줄이는 편이 성능에 유리하다.
+    따라서 위 예제와 같이 기존 DOM에 요소 노드를 반복하여 추가하는 것은 비효율적이다.*/
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+    <style>
+      #fruits {
+        display: flex;
+      }
+
+      #fruits > li {
+        margin-right: 30px;
+        text-decoration: underline;
+        list-style-type: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li #="apple" class="active">Apple</li>
+      <li #="banana">Banana</li>
+      <li #="orange">Orange</li>
+    </ul>
+
+    <em class="msg">apple</em>
+
+    <script>
+      const fruits = document.getElementById("fruits");
+      const msg = document.querySelector(".msg");
+
+      [...fruits.children].forEach(fruit =>
+        fruit.classList.toggle("active", target === fruit)
+      );
+
+      msg.textContent = target.id;
+    </script>
+  </body>
+</html>
