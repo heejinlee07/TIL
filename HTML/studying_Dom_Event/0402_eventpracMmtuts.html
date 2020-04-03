@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="0402_eventpracMmtutsStyle.css"
+    />
+  </head>
+  <body>
+    <nav id="closeNav">
+      <div onclick="toggleNav()"></div>
+    </nav>
+
+    FIXME:else if쪽이 잘못된 느낌. 클릭시 검은 박스 다시 나타나지않음.
+
+    <script>
+      var navStatus = true;
+
+      function toggleNav() {
+        if (navStatus == true) {
+          document.getElementById("closeNav").style.left = "-300px";
+          navStatus = false;
+        } else if (navStatus == false)
+          document.getElementById("closeNav").style.left = "0px";
+        navStatus = true;
+      }
+    </script>
+  </body>
+</html>
