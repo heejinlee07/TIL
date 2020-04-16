@@ -11,22 +11,12 @@ function render() {
   let html = "";
 
   todos.forEach((todo) => {
-    html += `<li id = "${todo.id}"><label><input type="checkbox" ${
+    html += `<li id = "${todo.id}"><label><input type = "checkbox" ${
       todo.completed ? "checked" : ""
-    }>${todo.content}</label></li>`;
+    }>${todo.content}</label>`;
   });
+
   return html;
 }
-
-//값이 올 문맥이니까 삼항연산자 자리에 if문은 쓸 수 없다.
-//html =만 하면 계속 재할당됨. 그렇기 때문에 +=으로.
 
 console.log(render());
-
-function render() {
-  let html = "";
-
-  todos.forEach((todo) => {});
-
-  return html;
-}
