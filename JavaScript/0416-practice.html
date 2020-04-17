@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <body>
+    <ul class="todos"></ul>
+    <script>
+            const $todos = document.querySelector(".todos");
+
+           //TODO: GET https://jsonplaceholder.typicode.com/todos/1
+           //{userId: 1, id: 1, title: "delectus aut autem", completed: false}
+           fetch("https://jsonplaceholder.typicode.com/todos/1", {
+               method: "POST",
+               headers: { "content-type": "application/json" },
+               body: JSON.stringify({ userId: 100, title: "test", completed: false }),
+               })
+               //fetch는 promise를 return
+               .then((res) => res.json())
+               //객체 또는 배열이 반환됨.
+             	.then((todo) => console.log(todo))
+             	.catch((err) => console.log(err));
+
+          //delete method
+          fetch("https://jsonplaceholder.typicode.com/todos/201", {
+             method: "DELETE",
+             headers: { "content-type": "application/json" },
+             body: JSON.stringify({ userId: 100, title: "test", completed: false }),
+             });
+
+      //patch method
+       fetch("https://jsonplaceholder.typicode.com/todos/1", {
+          method: "PATCH",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ completed: false }),
+           });
+
+       //바꿀내용만 페이로드로 전달
+        const getTodo = async()=>{
+        const body = await.fetch("https://jsonplaceholder.typicode.com/todos/1").then(res=> res.json())
+        console.log(body)
+         }
+    </script>
+  </body>
+</html>
